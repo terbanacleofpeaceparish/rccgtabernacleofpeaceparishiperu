@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.logo {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.active, .logo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.top {
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    gap: 5px;
+}
+
+.text_nav {
+    padding-top: 8px;
+    color: white;
+    font-size: 20px;
+    padding-left: 8px;
+}
+
+.nav-link {
+    display: flex;
+    background-color: #0d1b2a;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    position: relative;
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-right: 20px;
+    height: auto;
+}
+
+.navbar-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_item1 {
+    margin: 10px;
+    padding-top: 7px;
+    color: white;
+}
+.nav_item2 {
+   margin: 10px;
+   padding-top: 7px;
+   color: white; 
+}
+.nav_item3 {
+    margin: 10px;
+    padding-top: 7px;
+    color: white;
+}
+
+ul li a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+li a:hover::after {
+    width: 100%;
+}
+
+.headings {
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.active, .headings:hover {
+    color: goldenrod;
+}
+
+.heading {
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.heading::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: black;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+.heading:hover::after {
+    width: 100%;
+}
+.seniors {
+    /*display: flex;
+    flex-direction: row;*/
+}
+
+
+/* HERO */
+.hero {
+    background: url('images/file_000000005434720ab05a517d4057c06b.png') center/cover;
+    color: black;
+    padding: 120px 20px;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+/* SECTIONS */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+.about {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    transition: 0.3s;
+}
+.active, .about:hover {
+    background-color: antiquewhite;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.active, .services:hover {
+    background-color: antiquewhite;
+    transform: scale(1.05);
+}
+
+.full-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.services {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.sermons {
+    background-color: wheat;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+}
+.active, .sermons:hover {
+    background-color: brown;
+    color: goldenrod;
+}
+
+
+
+
+/* BANK BOX */
+.bank-box {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.active, .bank-box:hover {
+    background-color: antiquewhite;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* BUTTON */
+button {
+    border: none;
+    cursor: pointer;
+    background-color: darkgoldenrod;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.active, button:hover {
+    background-color: brown;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: goldenrod;
+    text-decoration: none;
+}
+.fb-icon {
+    color: white;
+    background-color: blue;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+.top2 {
+    display: flex;
+    padding: 50px;
+    margin: 50px;
+    gap: 10px;
+    flex-direction: row;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0d1b2a;
+    color: white;
+    padding: 15px;
+}
+.footer {
+    align-items: center;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 325px) {
+    .navbar-container {
+        width: 100%;
+    }
+
+    .nav-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    .hero {
+        padding: 80px 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    .menu li {
+        margin: 15px 0;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .text_nav {
+        font-size: 14px;
+    }
+    /*img {
+        width: 100%;
+        height: auto;*/
+    }
+    .container,
+    .row,
+    .flex {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 15px;
+    }
+    h2 {
+        font-size: 12px;
+    }
+    p {
+        font-size: 10px;
+    }
+    h3 {
+        font-size: 10px;
+    }
+    h4 {
+        font-size: 10px;
+    }
+    .full-about {
+        flex-direction: column;
+        margin: 0px;
+        width: 100%;
+    }
+    .about {
+        width: 100%;
+        height: auto;
+    }
+    .services {
+        width: 100%;
+        height: auto;
+    }
+    img .sml {
+        width: 10px;
+    }
+    .sermons {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        padding: auto 0;
+    }
+    .lrg {
+        width: 50px;
+        height: 70px;
+    }
+    img {
+        width: 50px;
+        height: 70px;
+    }
+    .bank-box {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+    .services {
+        margin: 10px auto;
+    }
+    button {
+        width: 50px;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    button:hover {
+        background-color: brown;
+    }
+    .no-space {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+}
+.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+.hamburger.is-active:before {
+    transform: rotate(-45deg); translate: (-8px 6px);
+}
+.hamburger.is-active:after {
+    transform: rotate(45deg); translate: (-9px -8px);
+}
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: darkblue;
+    padding-top: 120px;
+    transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto 16px;
+    padding: 12px 16px;
+    background-color: purple;
+    color: white;
+    text-decoration: none;
+
+}
+.mobile-nav a:hover {
+    background-color: blueviolet;
+}
