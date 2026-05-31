@@ -40,8 +40,8 @@ html {
 .text_nav {
     padding-top: 8px;
     color: white;
-    font-size: 20px;
-    padding-left: 8px;
+    font-size: 13px;
+    padding-left: 3px;
 }
 
 .nav-link {
@@ -53,6 +53,7 @@ html {
     position: relative;
     flex-wrap: wrap;
     width: 100%;
+    position: relative;
 }
 .menu-toggle {
     display: none;
@@ -73,6 +74,7 @@ html {
 .navbar-container {
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .nav_item1 {
@@ -112,6 +114,7 @@ li a::after {
 li a:hover::after {
     width: 100%;
 }
+
 
 .headings {
     color: black;
@@ -185,6 +188,29 @@ section {
     justify-content: center;
     justify-self: center;
     justify-items: center;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+}
+.send2 {
+    background-color: brown;
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    justify-self: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    margin-top: 8px;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
 }
 .about {
     background-color: white;
@@ -192,7 +218,8 @@ section {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
     margin: 20px auto;
-    width: 300px;
+    width: 100px;
+    height: auto;
     transition: 0.3s;
 }
 .active, .about:hover {
@@ -209,6 +236,8 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 300px;
+    height: auto;
 }
 
 .services {
@@ -217,7 +246,8 @@ section {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
     margin: 20px auto;
-    width: 300px;
+    width: 100px;
+    height: auto;
     transition: 0.3s;
 }
 
@@ -319,37 +349,48 @@ footer {
     flex-direction: row;
     
 }
+.lct-img {
+    height: 40px;
+    width: 40px;
+}
+.slider {
+    height: auto;
+}
+
 
 /* RESPONSIVE */
-@media (max-width: 400px) {
-    .navbar-container {
-        width: 100%;
-    }
-
+@media (max-width: 200px) {
     .nav-link {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
         max-width: 400px;
+        width: 100%;
+        text-wrap: nowrap;
+        min-width: 250px;
     }
     .hero {
         padding: 80px 10px;
-        max-width: 400px;
+        max-width: 350px;
+        width: 100%;
         max-height: 200px;
         text-wrap: nowrap;
+        min-width: 250px;
     }
 
     .navbar-container {
         display: flex;
         flex-direction: column;
-        max-width: 4000px;
+        max-width: 350px;
+        width: 100%;
+        height: 200px;
+        max-width: 400px;
+        min-width: 250px;
     }
-    .menu-toggle {
-        display: block;
-    }
+    
 
-    .menu{
+    /*.menu{
         position: absolute;
         top: 60px;
         left: 0;
@@ -363,20 +404,25 @@ footer {
     }
     .menu.active {
         display: flex;
-    }
+    }*/
     .text_nav {
-        font-size: 16.5px;
+        font-size: 10px;
+        text-wrap: none;
+    }
+    .top {
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        text-align: center;
     }
     /*img {
         width: 100%;
         height: auto;*/
     }
-    .container,
-    .row,
-    .flex {
+    /*.container .row, .flex {
         flex-direction: column;
         width: 100%;
-    }
+    }*/
 
     body {
         overflow-x: hidden;
@@ -384,6 +430,15 @@ footer {
     button {
         width: 100%;
         padding: 10px;
+    }
+    .lct-img {
+        height: 40px;
+        width: 40px;
+    }
+    hr {
+        width: 180px;
+        margin-left: 5px;
+        height: 1px;
     }
     h1 {
         font-size: 20px;
@@ -395,7 +450,7 @@ footer {
         font-size: 10px;
     }
     h3 {
-        font-size: 15px;
+        font-size: 13px;
     }
     h4 {
         font-size: 12px;
@@ -411,8 +466,22 @@ footer {
     }
     .services {
         width: 100%;
-        height: 350px;
+        height: auto;
     }
+    .bank-box {
+        background: wheat;
+        padding: 20px;
+        margin: 20px auto;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
     img .sml {
         width: 10px;
     }
@@ -427,18 +496,13 @@ footer {
         height: 70px;
     }
     img {
-        width: 80px;
-        height: 100px;
+        width: 70px;
+        height: 90px;
     }
     .text-color {
         color: goldenrod;
     }
-    .bank-box {
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-    }
+    
     .services {
         margin: 10px auto;
     }
@@ -455,10 +519,20 @@ footer {
         margin-top: 20px;
         padding-top: 20px;
     }
+    .hamburger {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .slider {
+        height: auto;
+    }
 }
+
 .hamburger {
     position: relative;
-    display: block;
+    display: none;
     width: 35px;
     height: 35px;
     cursor: pointer;
@@ -466,16 +540,18 @@ footer {
     background: none;
     outline: none;
     border: none;
+    font-size: 24px;
 }
 .hamburger .bar, .hamburger:after, .hamburger:before {
     content: '';
     display: block;
     width: 100%;
-    height: 5px;
+    height: 2px;
     background-color: white;
     margin: 6px 0px;
     transition: 0.4s;
 }
+
 .hamburger.is-active:before {
     transform: rotate(-45deg); translate: (-8px 6px);
 }
@@ -486,21 +562,25 @@ footer {
     opacity: 0;
 }
 .mobile-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 100%;
-    width: 100%;
+    position: absolute;
+    top: 100%;
+    right: -250px;
+    left: 250px;
+    width: 250px;
+    height: 420px;
     min-height: 100vh;
-    display: block;
+    display: none;
     z-index: 98;
-    background-color: darkblue;
+    background-color: purple;
     padding-top: 120px;
     transition: 0.4s;
+    box-shadow: -5px 0 15px rgb(0, 0, 0.3);
 }
 
 .mobile-nav.is-active {
     left: 0;
+    display: block;
+    right: 0;
 }
 
 .mobile-nav a {
@@ -510,10 +590,9 @@ footer {
     text-align: center;
     margin: 0 auto 16px;
     padding: 12px 16px;
-    background-color: purple;
+    background-color: brown;
     color: white;
     text-decoration: none;
-
 }
 .mobile-nav a:hover {
     background-color: blueviolet;
